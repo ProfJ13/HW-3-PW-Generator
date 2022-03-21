@@ -17,48 +17,50 @@ generateBtn.addEventListener("click", writePassword);
 
 // Begin original code
 
-// Password characters
-var characters = {
-  upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  lowerLetters = "abcdefghijklmnopqrstuvwxyz",
-  numbers = "1234567890",
-  specialCharacters = "`~!@#$%^&*()-_=+,<.>/?\|"
-}
 
-function promptUpperLetters() {
-  characters.upperLetters = window.confirm("Would you like your password to contain UPPERCASE characters?");
-  return characters.upperLetters;
-}
 
-function promptlowerLetters() {
-  characters.lowerLetters = window.confirm("Would you like your password to contain LOWERCASE characters?");
-  return characters.lowerLetters;
-};
+// // Password characters
+// var characters = {
+//   upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+//   lowerLetters = "abcdefghijklmnopqrstuvwxyz",
+//   numbers = "1234567890",
+//   specialCharacters = "`~!@#$%^&*()-_=+,<.>/?\|"
+// }
 
-function promptNumbers() {
-  characters.numbers = window.confirm("Would you like your password to contain NUMBERS?");
-  return characters.numbers;
-}
+// function promptUpperLetters() {
+//   characters.upperLetters = window.confirm("Would you like your password to contain uppercase characters?");
+//   return characters.upperLetters;
+// }
 
-var promptspecialCharacters = function () {
-  characters.specialCharacters = window.confirm("Would you like your password to contain SPECIAL characters?");
-  return characters.specialCharacters;
-};
+// function promptlowerLetters() {
+//   characters.lowerLetters = window.confirm("Would you like your password to contain lowercase characters?");
+//   return characters.lowerLetters;
+// };
 
-// Password length validation
-function validateLengthInput(password) {
-  if (password.length >= 8 && password.length <= 128) {
-    password.validLength = true;
-    lenErrorDiv.style.display = "none";
-  } else {
-    if (!passwordInpt.validLength) {
-      lenErrorDiv.style.display = "block";
-    }
-    password.validLength = false;
-  }
-}
+// function promptNumbers() {
+//   characters.numbers = window.confirm("Would you like your password to contain numbers?");
+//   return characters.numbers;
+// }
 
-// Define generatePassword function from above
-function.generatePassword() {
+// var promptspecialCharacters = function () {
+//   characters.specialCharacters = window.confirm("Would you like your password to contain special characters?");
+//   return characters.specialCharacters;
+// };
 
-}
+// // Password length validation
+// function validateLengthInput(password) {
+//   if (password.length >= 8 && password.length <= 128) {
+//     password.validLength = true;
+//     lenErrorDiv.style.display = "none";
+//   } else {
+//     if (!passwordInpt.validLength) {
+//       lenErrorDiv.style.display = "block";
+//     }
+//     password.validLength = false;
+//   }
+// }
+
+// // Define generatePassword function from above
+// function.generatePassword() {
+
+// }
