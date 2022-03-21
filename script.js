@@ -1,3 +1,5 @@
+// Prewritten code - *do not change*
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -12,3 +14,17 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Begin original code
+
+// Password characters
+var upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowerLetters = "abcdefghijklmnopqrstuvwxyz"
+var numbers = "1234567890"
+var specialCharacters = "`~!@#$%^&*()-_=+,<.>/?\|"
+
+
+// Define generatePassword function from above
+function.generatePassword() {
+
+}
