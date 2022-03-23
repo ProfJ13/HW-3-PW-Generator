@@ -28,6 +28,8 @@ var characters = {
 // Password generator when button is pushed
 function generatePassword() {
 
+  // Added this as it was throwing an error before adding it - why is this?
+  var password = "";
   var passwordVariables = "";
 
   // Password length 
@@ -83,6 +85,7 @@ function generatePassword() {
 }
 
 // Need password to be displayed* code not working, come back tomorrow
+// Make prompts repeat when no variable is selected.
 
 // Actual guidelines for reference:
 // GIVEN I need a new, secure password
