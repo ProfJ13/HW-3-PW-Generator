@@ -28,52 +28,65 @@ var characters = {
 // Password generator when button is pushed
 function generatePassword() {
 
-// Password length 
-  var passwordLength = window.prompt("What password length would you like?");
-        if(
-          passwordLength >128 ||  passwordLength <8) {
-          window.alert("Your password must be between 8 and 128 characters.");
-          return;
-        }
+  var password = "";
+  var passwordVariables = "";
 
+  // Password length 
+  var passwordLength = window.prompt("What password length would you like?");
+  if (
+    passwordLength > 128 || passwordLength < 8) {
+    window.alert("Your password must be between 8 and 128 characters.");
+    return;
+  }
+
+  // Variable prompts
+  var upperLettersSelection = window.confirm("Use uppercase letters?");
+  console.log(upperLettersSelection);
+  if (upperLettersSelection) {
+    passwordVariables += characters.upperLetters;
+  }
+  console.log(passwordVariables);
+
+  var lowerLettersSelection = window.confirm("Use lowercase letters?");
+  console.log(lowerLettersSelection);
+  if (lowerLettersSelection) {
+    passwordVariables += characters.lowerLetters;
+  }
+  console.log(passwordVariables);
+
+  var numbersSelection = window.confirm("Use numerical characters?");
+  console.log(numbersSelection);
+  if (numbersSelection) {
+    passwordVariables += characters.numbers;
+  }
+  console.log(passwordVariables);
+
+  var specialCharactersSelection = window.confirm("Use special characters?");
+  console.log(specialCharactersSelection);
+  if (specialCharactersSelection) {
+    passwordVariables += characters.specialCharacters;
+  }
+  console.log(passwordVariables);
 
 }
 
+// Need error for if no variables are selected
+// Need actual password generator... (for loop and Math.random?)
+// Need password to be displayed
 
-// function promptUpperLetters() {
-//   characters.upperLetters = window.confirm("Would you like your password to contain uppercase characters?");
-//   return characters.upperLetters;
-// }
-
-// function promptlowerLetters() {
-//   characters.lowerLetters = window.confirm("Would you like your password to contain lowercase characters?");
-//   return characters.lowerLetters;
-// };
-
-// function promptNumbers() {
-//   characters.numbers = window.confirm("Would you like your password to contain numbers?");
-//   return characters.numbers;
-// }
-
-// var promptspecialCharacters = function () {
-//   characters.specialCharacters = window.confirm("Would you like your password to contain special characters?");
-//   return characters.specialCharacters;
-// };
-
-// // Password length validation
-// function validateLengthInput(password) {
-//   if (password.length >= 8 && password.length <= 128) {
-//     password.validLength = true;
-//     lenErrorDiv.style.display = "none";
-//   } else {
-//     if (!passwordInpt.validLength) {
-//       lenErrorDiv.style.display = "block";
-//     }
-//     password.validLength = false;
-//   }
-// }
-
-// // Define generatePassword function from above
-// function.generatePassword() {
-
-// }
+// Actual guidelines for reference:
+// GIVEN I need a new, secure password
+// WHEN I click the button to generate a password
+// THEN I am presented with a series of prompts for password criteria
+// WHEN prompted for password criteria
+// THEN I select which criteria to include in the password
+// WHEN prompted for the length of the password
+// THEN I choose a length of at least 8 characters and no more than 128 characters
+// WHEN asked for character types to include in the password
+// THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+// WHEN I answer each prompt
+// THEN my input should be validated and at least one character type should be selected
+// WHEN all prompts are answered
+// THEN a password is generated that matches the selected criteria
+// WHEN the password is generated
+// THEN the password is either displayed in an alert or written to the page
