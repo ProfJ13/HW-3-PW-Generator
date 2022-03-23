@@ -17,15 +17,28 @@ generateBtn.addEventListener("click", writePassword);
 
 // Begin original code
 
+// Password characters
+var characters = {
+  upperLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowerLetters: "abcdefghijklmnopqrstuvwxyz",
+  numbers: "1234567890",
+  specialCharacters: "`~!@#$%^&*()-_=+,<.>/?\|",
+}
+
+// Password generator when button is pushed
+function generatePassword() {
+
+// Password length 
+  var passwordLength = window.prompt("What password length would you like?");
+        if(
+          passwordLength >128 ||  passwordLength <8) {
+          window.alert("Your password must be between 8 and 128 characters.");
+          return;
+        }
 
 
-// // Password characters
-// var characters = {
-//   upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-//   lowerLetters = "abcdefghijklmnopqrstuvwxyz",
-//   numbers = "1234567890",
-//   specialCharacters = "`~!@#$%^&*()-_=+,<.>/?\|"
-// }
+}
+
 
 // function promptUpperLetters() {
 //   characters.upperLetters = window.confirm("Would you like your password to contain uppercase characters?");
