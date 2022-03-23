@@ -28,7 +28,6 @@ var characters = {
 // Password generator when button is pushed
 function generatePassword() {
 
-  var password = "";
   var passwordVariables = "";
 
   // Password length 
@@ -65,14 +64,25 @@ function generatePassword() {
   console.log(specialCharactersSelection);
   if (specialCharactersSelection) {
     passwordVariables += characters.specialCharacters;
-  }
+  };
   console.log(passwordVariables);
 
+  // If no variables are selected
+  if (passwordVariables === "") {
+    window.alert("Please select at least one character type to continue.");
+  };
+
+  // Password creation from variables
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    for (var i = 0; i < passwordLength; i++) {
+      password += passwordVariables.charAt(Math.floor(Math.random() * passwordVariables.length));
+    };
+    console.log(password)
+    return password
+  };
 }
 
-// Need error for if no variables are selected
-// Need actual password generator... (for loop and Math.random?)
-// Need password to be displayed
+// Need password to be displayed* code not working, come back tomorrow
 
 // Actual guidelines for reference:
 // GIVEN I need a new, secure password
